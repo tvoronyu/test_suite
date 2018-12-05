@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /*background: #fcfaf9;*/
+}
+
+.grid {
+ /* display: flex;
+  justify-content: space-around;*/
+  position: relative;
+}
+
+
+.item {
+  /*padding: 5px;*/
+  display: block;
+  position: absolute;
+  /*height: 200px;
+  width: 200px;*/
+  /*max-width: 300px;
+  min-width: 250px;*/
+  width: 330px;
+  border-radius: 5px;
+  min-height: 50px;
+  border: 1px solid #dadce0;
+  /*max-height: 400px;*/
+  /*overflow: hidden;*/
+  overflow-wrap: break-word;
+  /*word-break: break-all;*/
+  /*line-height: 200px;*/
+  margin: 5px;
+  /*text-align: center;*/
+  z-index: 1;
+}
+
+.item.muuri-item-dragging {
+  z-index: 3;
+}
+
+.item.muuri-item-releasing {
+  z-index: 2;
+}
+
+.item.muuri-item-hidden {
+  z-index: 0;
+}
+
+.item-content {
+  min-height: 100px;
+  /*border-radius: 5px;*/
+  position: relative;
+  /*width: calc(100% - 5px);*/
+  height: 100%;
+  margin: 5px;
+  cursor: pointer;
+      color: #202124;
+  /*padding: 20px 0px 20px;*/
+  background-color: rgb(255, 255, 255);
+  /*font-size: 40px;*/
+  /*text-align: center;*/
+}
+
+.item.muuri-item-dragging .item-content {
+  background: #8993a2;
+}
+
+.item.muuri-item-releasing .item-content {
+  background: #152c43;
+}
